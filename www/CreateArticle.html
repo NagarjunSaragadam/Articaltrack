@@ -133,7 +133,7 @@
         }
 
         if (parms.length > 0) {
-            $("#hiditemcode").val(qsParm["id"]);
+            $("#hiditemcode").val(qsParm["id"]).replace(/%20/g, " ");
             var textname = $('#hiditemcode');            
         }
     }

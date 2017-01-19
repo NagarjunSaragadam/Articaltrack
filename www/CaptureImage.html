@@ -197,9 +197,8 @@
             $("#loading").hide();
             return;
         }
-        document.getElementById('camera_image').style.display = "none";
-        var server = 'http://localhost:54419/api/ArticleFileUpload/ArticleUploadFile'        
-        //var server = 'http://172.168.3.211/ATTP/api/ArticleFileUpload/ArticleUploadFile'        
+        document.getElementById('camera_image').style.display = "none";        
+        var server = 'http://172.168.3.211/ATTP/api/ArticleFileUpload/ArticleUploadFile'        
         if (server) {
             var options = new FileUploadOptions();
             options.fileKey = "file";
@@ -218,7 +217,7 @@
                 window.location.href = 'Home.html';
             }, function (error) {
                 $("#loading").hide();
-                document.getElementById('camera_status').innerHTML = "Upload failed: Code = " + error.code + "\n upload error source " + error.source + "\n upload error target " + error.target;
+                document.getElementById('camera_status').innerHTML = "Upload failed: Code = " + error + "\n upload error source " + error.source + "\n upload error target " + error.target;
             }, options);
         }
     }

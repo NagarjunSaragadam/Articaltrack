@@ -116,7 +116,7 @@
 <script type="text/javascript" src="js/jquery1.11.1-min.js"></script>
 <script type="text/javascript">
     var clntHeight = parseFloat(document.documentElement.clientHeight) - 140;    
-    var apiURLarticle = 'http://202.83.27.199/Artrackapp/api/Articleissue/IssueArticle';
+    var apiURLarticle = 'http://172.168.3.211/ATTP/api/Articleissue/IssueArticle';
     function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false);
     }
@@ -200,8 +200,8 @@
 
     function getdata()
     {
-         $.ajax({
-            url: 'http://202.83.27.199/Artrackapp/api/Articleissue/Getitemdetails?Itemcode=' + $("#hiditemcode").val(),
+         $.ajax({              
+            url: 'http://172.168.3.211/ATTP/api/Articleissue/Getitemdetails?Itemcode=' + $("#hiditemcode").val(),
             type: 'GET',
             data: '{}',
             dataType: 'json',            
@@ -290,8 +290,9 @@
                     var textitemissuedto = $('#txtitemissuetopresent').val(); 
                     Adddata.ItemID = itemid;
                     Adddata.Itemissuedto = textitemissuedto;                    
-                    $.ajax({
-                        url: 'http://202.83.27.199/Artrackapp/api/Articleissue/IssueArticle',
+                    $.ajax({                        
+                        url: 'http://172.168.3.211/ATTP/api/Articleissue/IssueArticle',
+                        //url: 'http://202.83.27.199/Artrackapp/api/Articleissue/IssueArticle',
                         //url: 'http://172.168.8.151/ArticleIssue/api/Articleissue/IssueArticle',
                         type: 'POST',
                         data: Adddata,

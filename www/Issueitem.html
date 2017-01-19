@@ -201,7 +201,8 @@
     function getdata()
     {
          $.ajax({              
-            url: 'http://172.168.3.211/ATTP/api/Articleissue/Getitemdetails?Itemcode=' + $("#hiditemcode").val(),
+             //url: 'http://localhost:54419/api/Articleissue/Getitemdetails?Itemcode=' + $("#hiditemcode").val(),
+             url: 'http://172.168.3.211/ATTP/api/Articleissue/Getitemdetails?Itemcode=' + $("#hiditemcode").val(),
             type: 'GET',
             data: '{}',
             dataType: 'json',            
@@ -291,6 +292,7 @@
                     Adddata.ItemID = itemid;
                     Adddata.Itemissuedto = textitemissuedto;                    
                     $.ajax({                        
+                        //url: 'http://localhost:54419/api/Articleissue/IssueArticle',
                         url: 'http://172.168.3.211/ATTP/api/Articleissue/IssueArticle',
                         //url: 'http://202.83.27.199/Artrackapp/api/Articleissue/IssueArticle',
                         //url: 'http://172.168.8.151/ArticleIssue/api/Articleissue/IssueArticle',

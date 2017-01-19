@@ -133,7 +133,7 @@
         }
 
         if (parms.length > 0) {
-            $("#hiditemcode").val(qsParm["id"]).replace(/%20/g, " ");;
+            $("#hiditemcode").val(qsParm["id"]);
             var textname = $('#hiditemcode');            
         }
     }
@@ -148,7 +148,7 @@
              $.ajax({
             type: "GET",
             contentType: "application/json; charset=utf-8",
-            url: 'http://202.83.27.199/Artrackapp/api/Articleissue/GetItemTypes',
+            url: 'http://172.168.3.211/ATTP/api/Articleissue/GetItemTypes',
                  
             dataType: "json",
             data: '{}',
@@ -169,7 +169,8 @@
         var _sell = $("#sellist option:selected").val();
         var textitem = $('#txtitemname').val();
         var textdesc = $('#txtitemdesc').val();
-        var apiURLarticle = 'http://202.83.27.199/Artrackapp/api/Articleissue/AddArticle';
+        var apiURLarticle = 'http://172.168.3.211/ATTP/api/Articleissue/AddArticle';
+        //var apiURLarticle = 'http://localhost:54419/api/Articleissue/AddArticle';        
         debugger;
         if(_sell==0)
             {
